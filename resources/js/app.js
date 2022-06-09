@@ -2,9 +2,7 @@ import "./bootstrap";
 
 import { createApp } from "vue";
 import MainComponent from "./components/MainComponent.vue";
-import ProductComponent from "./components/ProductComponent.vue";
 import PostComponent from "./components/PostComponent.vue";
-import PostProduct from "./components/PostProduct.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [

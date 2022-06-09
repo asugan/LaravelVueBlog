@@ -6,9 +6,7 @@
             <article class="flex flex-col shadow my-4">
                 <!-- Article Image -->
                 <a href="#" class="hover:opacity-75">
-                    <img
-                        src="https://source.unsplash.com/collection/1346951/1000x500?sig=1"
-                    />
+                    <img v-bind:src="'storage/' + post.image1" />
                 </a>
                 <div class="bg-white flex flex-col justify-start p-6">
                     <a
@@ -28,15 +26,13 @@
                         >, Published on April 25th, 2020
                     </p>
                     <h1 class="text-2xl font-bold pb-3">Introduction</h1>
-                    <p class="pb-3">
-                        {{ post.body }}
-                    </p>
+                    <p class="pb-3" v-html="post.body"></p>
                 </div>
             </article>
 
             <div class="w-full flex pt-6">
                 <a
-                    href="#"
+                    v-bind:href="post.id - 1"
                     class="w-1/2 bg-white shadow hover:shadow-md text-left p-6"
                 >
                     <p
@@ -49,7 +45,7 @@
                     </p>
                 </a>
                 <a
-                    href="#"
+                    v-bind:href="post.id + 1"
                     class="w-1/2 bg-white shadow hover:shadow-md text-right p-6"
                 >
                     <p
@@ -128,6 +124,7 @@ export default {
 
     mounted() {
         this.LoadPost();
+        this.HomeDeneme();
     },
 
     methods: {
@@ -140,6 +137,13 @@ export default {
                 .catch(function (error) {
                     console.log(error);
                 });
+        },
+        HomeDeneme: function () {
+            if (this.$route.params.id == 0) {
+                this.$router.push({ name: "Home" });
+            } else if (this.$route.params.id == "NaN") {
+                this.$router.push({ name: "Home" });
+            }
         },
     },
 };
