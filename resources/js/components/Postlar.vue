@@ -1,7 +1,7 @@
 <template>
     <!-- Posts Section -->
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
-        <article class="flex flex-col shadow my-4" v-for="post in posts">
+        <article class="flex flex-col shadow my-4" v-for="post in posts.data">
             <!-- Article Image -->
             <a v-bind:href="post.id" class="hover:opacity-75">
                 <img v-bind:src="'storage/' + post.image1" />
@@ -25,7 +25,11 @@
                         >Çağla Elçin Eren</a
                     >, {{ format_date(post.created_at) }}
                 </p>
-                <a v-bind:href="post.id" class="pb-6" v-html="post.body"></a>
+                <a
+                    v-bind:href="post.id"
+                    class="pb-6"
+                    v-html="post.body.substring(0, 200) + '...'"
+                ></a>
                 <a
                     v-bind:href="post.id"
                     class="uppercase text-gray-800 hover:text-black"
@@ -34,31 +38,32 @@
             </div>
         </article>
         <!-- Pagination -->
-        <div class="flex items-center py-8">
-            <a
-                href="#"
-                class="h-10 w-10 bg-blue-800 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center"
-                >1</a
-            >
-            <a
-                href="#"
-                class="h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center"
-                >2</a
-            >
-            <a
-                href="#"
-                class="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3"
-                >Next <i class="fas fa-arrow-right ml-2"></i
-            ></a>
-        </div>
+        <pagination :data="posts" @pagination-change-page="list">
+            <template #prev-nav>
+                <a
+                    class="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3 left"
+                    >Önceki Sayfa <i class="fas fa-arrow-left ml-2"></i
+                ></a>
+            </template>
+            <template #next-nav>
+                <a
+                    class="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3 right"
+                    >Sonraki Sayfa <i class="fas fa-arrow-right ml-2"></i
+                ></a>
+            </template>
+        </pagination>
     </section>
 </template>
 
 <script>
 import axios from "axios";
 import moment from "moment";
+import pagination from "laravel-vue-pagination";
 
 export default {
+    components: {
+        pagination,
+    },
     data() {
         return {
             posts: [],
@@ -66,18 +71,18 @@ export default {
     },
 
     mounted() {
-        this.loadPost();
+        this.list();
     },
 
     methods: {
-        loadPost: function () {
-            axios
-                .get("/api/posts")
-                .then((response) => {
-                    this.posts = response.data;
+        async list(page = 1) {
+            await axios
+                .get(`/api/posts?page=${page}`)
+                .then(({ data }) => {
+                    this.posts = data;
                 })
-                .catch(function (error) {
-                    console.log(error);
+                .catch(({ response }) => {
+                    console.error(response);
                 });
         },
         format_date(value) {
@@ -88,3 +93,19 @@ export default {
     },
 };
 </script>
+
+<style>
+.pagination {
+    margin-bottom: 0;
+    display: flex;
+    padding-top: 2rem;
+    gap: 0.5rem;
+}
+
+.right {
+    margin-left: 2rem;
+}
+.left {
+    margin-right: 2rem;
+}
+</style>

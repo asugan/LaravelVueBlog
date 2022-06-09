@@ -34,6 +34,9 @@ class PostResource extends Resource
                     Forms\Components\RichEditor::make('body')->required()->label('İçerik'),
                     FileUpload::make('image1')
                         ->image()
+                        ->imageCropAspectRatio('16:9')
+                        ->imageResizeTargetWidth('1000')
+                        ->imageResizeTargetHeight('500')
                         ->label('Kapak Resmi')
                         ->imagePreviewHeight('250')
                         ->directory('img')

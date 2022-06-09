@@ -11,7 +11,7 @@ class CardController extends Controller
 {
     public function index()
     {
-        $cardresource = Post::all();
+        $cardresource = Post::paginate(1);
         return response()->json($cardresource);
     }
 
