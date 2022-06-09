@@ -12,14 +12,14 @@
                         <a
                             class="hover:text-gray-200 hover:underline px-4"
                             href="#"
-                            >Shop</a
+                            >Beğendiğim Kitaplar</a
                         >
                     </li>
                     <li>
                         <a
                             class="hover:text-gray-200 hover:underline px-4"
                             href="#"
-                            >About</a
+                            >Hakkımda</a
                         >
                     </li>
                 </ul>
@@ -49,9 +49,9 @@
                 class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl"
                 href="#"
             >
-                Minimal Blog
+                Çağla'nın Çöplüğü
             </a>
-            <p class="text-lg text-gray-600">Lorem Ipsum Dolor Sit Amet</p>
+            <p class="text-lg text-gray-600">200 IQ Psikolog Bloğu</p>
         </div>
     </header>
 
@@ -81,22 +81,22 @@
                 class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2"
             >
                 <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Technology</a
+                    >Anasayfa</a
                 >
                 <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Automotive</a
+                    >Psikoloji</a
                 >
                 <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Finance</a
+                    >Din</a
                 >
                 <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Politics</a
+                    >Politika</a
                 >
                 <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Culture</a
+                    >Kültür</a
                 >
                 <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Sports</a
+                    >Felsefe</a
                 >
             </div>
         </div>
