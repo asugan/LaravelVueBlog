@@ -8,38 +8,68 @@
                 v-for="post in posts.data"
             >
                 <!-- Article Image -->
-                <a v-bind:href="'/post/' + post.id" class="hover:opacity-75">
-                    <img v-bind:src="'/storage/' + post.image1" />
-                </a>
+                <router-link
+                    :to="{
+                        name: 'Showpage',
+                        params: { id: post.id },
+                    }"
+                >
+                    <a class="hover:opacity-75">
+                        <img v-bind:src="'/storage/' + post.image1" />
+                    </a>
+                </router-link>
                 <div class="bg-white flex flex-col justify-start p-6">
-                    <a
-                        v-bind:href="'/post/' + post.id"
-                        class="text-blue-700 text-sm font-bold uppercase pb-4"
-                        >Kategori : {{ post.category_name }}</a
-                    >
-                    <a
-                        v-bind:href="'/post/' + post.id"
-                        class="text-3xl font-bold hover:text-gray-700 pb-4"
-                        >{{ post.title }}</a
-                    >
-                    <p v-bind:href="'/post/' + post.id" class="text-sm pb-3">
-                        Yazar:
+                    <router-link :to="'/kategori/' + post.category_name">
                         <a
-                            v-bind:href="'/post/' + post.id"
-                            class="font-semibold hover:text-gray-800"
-                            >Çağla Elçin Eren</a
+                            class="text-blue-700 text-sm font-bold uppercase pb-4"
+                            >Kategori : {{ post.category_name }}</a
+                        ></router-link
+                    >
+                    <router-link
+                        :to="{
+                            name: 'Showpage',
+                            params: { id: post.id },
+                        }"
+                    >
+                        <a
+                            class="text-3xl font-bold hover:text-gray-700 pb-4"
+                            >{{ post.title }}</a
+                        ></router-link
+                    >
+                    <p class="text-sm pb-3">
+                        Yazar:
+                        <router-link
+                            :to="{
+                                name: 'Showpage',
+                                params: { id: post.id },
+                            }"
+                        >
+                            <a class="font-semibold hover:text-gray-800"
+                                >Çağla Elçin Eren</a
+                            ></router-link
                         >, {{ format_date(post.created_at) }}
                     </p>
-                    <a
-                        v-bind:href="'/post/' + post.id"
-                        class="pb-6"
-                        v-html="post.body.substring(0, 200) + '...'"
-                    ></a>
-                    <a
-                        v-bind:href="'/post/' + post.id"
-                        class="uppercase text-gray-800 hover:text-black"
-                        >Okumaya Devam Edin <i class="fas fa-arrow-right"></i
-                    ></a>
+                    <router-link
+                        :to="{
+                            name: 'Showpage',
+                            params: { id: post.id },
+                        }"
+                    >
+                        <a
+                            class="pb-6"
+                            v-html="post.body.substring(0, 200) + '...'"
+                        ></a
+                    ></router-link>
+                    <router-link
+                        :to="{
+                            name: 'Showpage',
+                            params: { id: post.id },
+                        }"
+                    >
+                        <a class="uppercase text-gray-800 hover:text-black"
+                            >Okumaya Devam Edin
+                            <i class="fas fa-arrow-right"></i></a
+                    ></router-link>
                 </div>
             </article>
             <!-- Pagination -->
