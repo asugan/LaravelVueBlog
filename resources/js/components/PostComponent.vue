@@ -23,9 +23,8 @@
                         Yazar:
                         <a href="#" class="font-semibold hover:text-gray-800"
                             >Çağla Elçin Eren</a
-                        >, Published on April 25th, 2020
+                        >, {{ format_date(post.created_at) }}
                     </p>
-                    <h1 class="text-2xl font-bold pb-3">Introduction</h1>
                     <p class="pb-3" v-html="post.body"></p>
                 </div>
             </article>
@@ -38,11 +37,9 @@
                     <p
                         class="text-lg text-blue-800 font-bold flex items-center"
                     >
-                        <i class="fas fa-arrow-left pr-1"></i> Previous
+                        <i class="fas fa-arrow-left pr-1"></i> Önceki
                     </p>
-                    <p class="pt-2">
-                        Lorem Ipsum Dolor Sit Amet Dolor Sit Amet
-                    </p>
+                    <p class="pt-2">Bir Önceki Yazımı İnceleyin.</p>
                 </a>
                 <a
                     v-bind:href="post.id + 1"
@@ -51,11 +48,9 @@
                     <p
                         class="text-lg text-blue-800 font-bold flex items-center justify-end"
                     >
-                        Next <i class="fas fa-arrow-right pl-1"></i>
+                        Sonraki <i class="fas fa-arrow-right pl-1"></i>
                     </p>
-                    <p class="pt-2">
-                        Lorem Ipsum Dolor Sit Amet Dolor Sit Amet
-                    </p>
+                    <p class="pt-2">Bir Sonraki Yazımı İnceleyin.</p>
                 </a>
             </div>
 
@@ -73,7 +68,7 @@
                 <div
                     class="flex-1 flex flex-col justify-center md:justify-start"
                 >
-                    <p class="font-semibold text-2xl">David</p>
+                    <p class="font-semibold text-2xl">Çağla Elçin Eren</p>
                     <p class="pt-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Curabitur vel neque non libero suscipit suscipit eu eu
@@ -108,6 +103,7 @@ import axios from "axios";
 import NavbarVue from "./Navbar.vue";
 import SidebarVue from "./Sidebar.vue";
 import FooterVue from "./Footer.vue";
+import moment from "moment";
 
 export default {
     data() {
@@ -143,6 +139,11 @@ export default {
                 this.$router.push({ name: "Home" });
             } else if (this.$route.params.id == "NaN") {
                 this.$router.push({ name: "Home" });
+            }
+        },
+        format_date(value) {
+            if (value) {
+                return moment(String(value)).format("DD/MM/YYYY");
             }
         },
     },

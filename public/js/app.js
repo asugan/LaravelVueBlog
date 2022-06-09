@@ -19902,6 +19902,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.vue */ "./resources/js/components/Navbar.vue");
 /* harmony import */ var _Sidebar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar.vue */ "./resources/js/components/Sidebar.vue");
 /* harmony import */ var _Footer_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer.vue */ "./resources/js/components/Footer.vue");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -19940,6 +19943,11 @@ __webpack_require__.r(__webpack_exports__);
         this.$router.push({
           name: "Home"
         });
+      }
+    },
+    format_date: function format_date(value) {
+      if (value) {
+        return moment__WEBPACK_IMPORTED_MODULE_4___default()(String(value)).format("DD/MM/YYYY");
       }
     }
   }
@@ -20168,63 +20176,60 @@ var _hoisted_8 = {
   href: "#",
   "class": "text-3xl font-bold hover:text-gray-700 pb-4"
 };
-
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_9 = {
   href: "#",
   "class": "text-sm pb-8"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Yazar: "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+};
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Yazar: ");
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
   "class": "font-semibold hover:text-gray-800"
-}, "Çağla Elçin Eren"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", Published on April 25th, 2020 ")], -1
+}, "Çağla Elçin Eren", -1
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "text-2xl font-bold pb-3"
-}, "Introduction", -1
-/* HOISTED */
-);
-
-var _hoisted_11 = ["innerHTML"];
-var _hoisted_12 = {
+var _hoisted_12 = ["innerHTML"];
+var _hoisted_13 = {
   "class": "w-full flex pt-6"
 };
-var _hoisted_13 = ["href"];
+var _hoisted_14 = ["href"];
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-lg text-blue-800 font-bold flex items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fas fa-arrow-left pr-1"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Previous ")], -1
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Önceki ")], -1
 /* HOISTED */
 );
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "pt-2"
-}, " Lorem Ipsum Dolor Sit Amet Dolor Sit Amet ", -1
+}, "Bir Önceki Yazımı İnceleyin.", -1
 /* HOISTED */
 );
 
-var _hoisted_16 = [_hoisted_14, _hoisted_15];
-var _hoisted_17 = ["href"];
+var _hoisted_17 = [_hoisted_15, _hoisted_16];
+var _hoisted_18 = ["href"];
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-lg text-blue-800 font-bold flex items-center justify-end"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Next "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Sonraki "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fas fa-arrow-right pl-1"
 })], -1
 /* HOISTED */
 );
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "pt-2"
-}, " Lorem Ipsum Dolor Sit Amet Dolor Sit Amet ", -1
+}, "Bir Sonraki Yazımı İnceleyin.", -1
 /* HOISTED */
 );
 
-var _hoisted_20 = [_hoisted_18, _hoisted_19];
+var _hoisted_21 = [_hoisted_19, _hoisted_20];
 
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6\"><div class=\"w-full md:w-1/5 flex justify-center md:justify-start pb-4\"><img src=\"https://source.unsplash.com/collection/1346951/150x150?sig=1\" class=\"rounded-full shadow h-32 w-32\"></div><div class=\"flex-1 flex flex-col justify-center md:justify-start\"><p class=\"font-semibold text-2xl\">David</p><p class=\"pt-2\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna. </p><div class=\"flex items-center justify-center md:justify-start text-2xl no-underline text-blue-800 pt-4\"><a class=\"\" href=\"#\"><i class=\"fab fa-facebook\"></i></a><a class=\"pl-4\" href=\"#\"><i class=\"fab fa-instagram\"></i></a><a class=\"pl-4\" href=\"#\"><i class=\"fab fa-twitter\"></i></a><a class=\"pl-4\" href=\"#\"><i class=\"fab fa-linkedin\"></i></a></div></div></div>", 1);
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"w-full flex flex-col text-center md:text-left md:flex-row shadow bg-white mt-10 mb-10 p-6\"><div class=\"w-full md:w-1/5 flex justify-center md:justify-start pb-4\"><img src=\"https://source.unsplash.com/collection/1346951/150x150?sig=1\" class=\"rounded-full shadow h-32 w-32\"></div><div class=\"flex-1 flex flex-col justify-center md:justify-start\"><p class=\"font-semibold text-2xl\">Çağla Elçin Eren</p><p class=\"pt-2\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna. </p><div class=\"flex items-center justify-center md:justify-start text-2xl no-underline text-blue-800 pt-4\"><a class=\"\" href=\"#\"><i class=\"fab fa-facebook\"></i></a><a class=\"pl-4\" href=\"#\"><i class=\"fab fa-instagram\"></i></a><a class=\"pl-4\" href=\"#\"><i class=\"fab fa-twitter\"></i></a><a class=\"pl-4\" href=\"#\"><i class=\"fab fa-linkedin\"></i></a></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_NavbarVue = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("NavbarVue");
@@ -20241,22 +20246,24 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.post.title), 1
   /* TEXT */
-  ), _hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, [_hoisted_10, _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.format_date($data.post.created_at)), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
     "class": "pb-3",
     innerHTML: $data.post.body
   }, null, 8
   /* PROPS */
-  , _hoisted_11)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  , _hoisted_12)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: $data.post.id - 1,
     "class": "w-1/2 bg-white shadow hover:shadow-md text-left p-6"
-  }, _hoisted_16, 8
+  }, _hoisted_17, 8
   /* PROPS */
-  , _hoisted_13), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  , _hoisted_14), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: $data.post.id + 1,
     "class": "w-1/2 bg-white shadow hover:shadow-md text-right p-6"
-  }, _hoisted_20, 8
+  }, _hoisted_21, 8
   /* PROPS */
-  , _hoisted_17)]), _hoisted_21]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SidebarVue)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_FooterVue)], 64
+  , _hoisted_18)]), _hoisted_22]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SidebarVue)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_FooterVue)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -20282,71 +20289,81 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "flex flex-col shadow my-4"
 };
-var _hoisted_3 = {
-  href: "#",
-  "class": "hover:opacity-75"
-};
+var _hoisted_3 = ["href"];
 var _hoisted_4 = ["src"];
 var _hoisted_5 = {
   "class": "bg-white flex flex-col justify-start p-6"
 };
-var _hoisted_6 = {
-  href: "#",
-  "class": "text-blue-700 text-sm font-bold uppercase pb-4"
-};
-var _hoisted_7 = {
-  href: "#",
-  "class": "text-3xl font-bold hover:text-gray-700 pb-4"
-};
-var _hoisted_8 = {
-  href: "#",
-  "class": "text-sm pb-3"
-};
+var _hoisted_6 = ["href"];
+var _hoisted_7 = ["href"];
+var _hoisted_8 = ["href"];
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Yazar: ");
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "font-semibold hover:text-gray-800"
-}, "Çağla Elçin Eren", -1
-/* HOISTED */
-);
+var _hoisted_10 = ["href"];
+var _hoisted_11 = ["href", "innerHTML"];
+var _hoisted_12 = ["href"];
 
-var _hoisted_11 = ["innerHTML"];
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Okumaya Devam Edin ");
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "uppercase text-gray-800 hover:text-black"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Okumaya Devam Edin "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fas fa-arrow-right"
-})], -1
+}, null, -1
 /* HOISTED */
 );
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex items-center py-8\"><a href=\"#\" class=\"h-10 w-10 bg-blue-800 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center\">1</a><a href=\"#\" class=\"h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center\">2</a><a href=\"#\" class=\"h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3\">Next <i class=\"fas fa-arrow-right ml-2\"></i></a></div>", 1);
+var _hoisted_15 = [_hoisted_13, _hoisted_14];
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex items-center py-8\"><a href=\"#\" class=\"h-10 w-10 bg-blue-800 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center\">1</a><a href=\"#\" class=\"h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center\">2</a><a href=\"#\" class=\"h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3\">Next <i class=\"fas fa-arrow-right ml-2\"></i></a></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Posts Section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.posts, function (post) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Article Image "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Article Image "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: post.id,
+      "class": "hover:opacity-75"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       src: 'storage/' + post.image1
     }, null, 8
     /* PROPS */
-    , _hoisted_4)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_6, "Kategori : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.category_name), 1
+    , _hoisted_4)], 8
+    /* PROPS */
+    , _hoisted_3), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: post.id,
+      "class": "text-blue-700 text-sm font-bold uppercase pb-4"
+    }, "Kategori : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.category_name), 9
+    /* TEXT, PROPS */
+    , _hoisted_6), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: post.id,
+      "class": "text-3xl font-bold hover:text-gray-700 pb-4"
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 9
+    /* TEXT, PROPS */
+    , _hoisted_7), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+      href: post.id,
+      "class": "text-sm pb-3"
+    }, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: post.id,
+      "class": "font-semibold hover:text-gray-800"
+    }, "Çağla Elçin Eren", 8
+    /* PROPS */
+    , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.format_date(post.created_at)), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_8, [_hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.format_date(post.created_at)), 1
-    /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: "#",
+    )], 8
+    /* PROPS */
+    , _hoisted_8), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: post.id,
       "class": "pb-6",
       innerHTML: post.body
     }, null, 8
     /* PROPS */
-    , _hoisted_11), _hoisted_12])]);
+    , _hoisted_11), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: post.id,
+      "class": "uppercase text-gray-800 hover:text-black"
+    }, _hoisted_15, 8
+    /* PROPS */
+    , _hoisted_12)])]);
   }), 256
   /* UNKEYED_FRAGMENT */
-  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination "), _hoisted_13])], 2112
+  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination "), _hoisted_16])], 2112
   /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
