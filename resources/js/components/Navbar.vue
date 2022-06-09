@@ -51,7 +51,7 @@
             >
                 Çağla'nın Çöplüğü
             </a>
-            <p class="text-lg text-gray-600">200 IQ Psikolog Bloğu</p>
+            <p class="text-lg text-gray-600">200 IQ Psikolog Blogu</p>
         </div>
     </header>
 
@@ -80,23 +80,29 @@
             <div
                 class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2"
             >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Anasayfa</a
+                <a class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+                    ><router-link to="/">Anasayfa</router-link></a
                 >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Psikoloji</a
+                <a class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+                    ><router-link to="/kategori/psikoloji"
+                        >Psikoloji</router-link
+                    ></a
                 >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Din</a
+                <a class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+                    ><router-link to="/kategori/din">Din</router-link></a
                 >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Politika</a
+                <a class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+                    ><router-link to="/kategori/politika"
+                        >Politika</router-link
+                    ></a
                 >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Kültür</a
+                <a class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+                    ><router-link to="/kategori/kültür">Kültür</router-link></a
                 >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Felsefe</a
+                <a class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
+                    ><router-link to="/kategori/felsefe"
+                        >Felsefe</router-link
+                    ></a
                 >
             </div>
         </div>

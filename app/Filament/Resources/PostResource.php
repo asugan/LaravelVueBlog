@@ -46,7 +46,10 @@ class PostResource extends Resource
                     DatePicker::make('created_at')->displayFormat('d/m/Y'),
                     Select::make('category_name')
                         ->label('Kategori')
-                        ->options(['Hikaye' => 'Hikaye'])
+                        ->options([
+                            'psikoloji' => 'Psikoloji',
+                            'din' => 'Din'
+                        ])
                         ->searchable()
                 ])
             );

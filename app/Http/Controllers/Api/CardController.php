@@ -11,7 +11,7 @@ class CardController extends Controller
 {
     public function index()
     {
-        $cardresource = Post::paginate(1);
+        $cardresource = Post::paginate(3);
         return response()->json($cardresource);
     }
 
@@ -19,5 +19,11 @@ class CardController extends Controller
     {
         $post = Post::find($id);
         return response()->json($post);
+    }
+
+    public function psyco($categoryid)
+    {
+        $hamham = Post::where('category_name', $categoryid)->paginate(3);
+        return response()->json($hamham);
     }
 }

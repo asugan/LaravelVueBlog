@@ -6,7 +6,7 @@
             <p class="pb-2">
                 Merhabalar ben Çağla Elçin Eren.Ankara Üniversitesin'de
                 Psikoloji bölümü 1. sınıf öğrencisiyim.Bloguma hoş geldiniz.Bu
-                blogda Psikoloji,Felsefe,Din ve daha birçok alanada yazılarımı
+                blogda Psikoloji,Felsefe,Din ve daha birçok alanda yazılarımı
                 takip edebilirsiniz.
             </p>
             <a

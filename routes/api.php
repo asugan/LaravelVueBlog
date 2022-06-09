@@ -18,5 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('category/{categoryid}', 'App\Http\Controllers\Api\CardController@psyco');
 Route::get('posts', 'App\Http\Controllers\Api\CardController@index');
 Route::get('{id}', 'App\Http\Controllers\Api\CardController@show');

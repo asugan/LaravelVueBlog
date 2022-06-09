@@ -6,7 +6,7 @@
             <article class="flex flex-col shadow my-4">
                 <!-- Article Image -->
                 <a href="#" class="hover:opacity-75">
-                    <img v-bind:src="'storage/' + post.image1" />
+                    <img v-bind:src="'/storage/' + post.image1" />
                 </a>
                 <div class="bg-white flex flex-col justify-start p-6">
                     <a
@@ -70,9 +70,9 @@
                 >
                     <p class="font-semibold text-2xl">Çağla Elçin Eren</p>
                     <p class="pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur vel neque non libero suscipit suscipit eu eu
-                        urna.
+                        Merhabalar umarım blogumda hem eğlenceli vakit
+                        geçirirsiniz hem de size bir şeyler katmayı ve öğrenmeyi
+                        başarırım.
                     </p>
                     <div
                         class="flex items-center justify-center md:justify-start text-2xl no-underline text-blue-800 pt-4"
