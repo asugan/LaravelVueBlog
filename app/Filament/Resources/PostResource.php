@@ -48,7 +48,10 @@ class PostResource extends Resource
                         ->label('Kategori')
                         ->options([
                             'psikoloji' => 'Psikoloji',
-                            'din' => 'Din'
+                            'din' => 'Din',
+                            'politika' => 'Politika',
+                            'kültür' => 'Kültür',
+                            'felsefe' => 'Felsefe',
                         ])
                         ->searchable()
                 ])
